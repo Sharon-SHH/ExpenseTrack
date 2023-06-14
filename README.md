@@ -1,6 +1,6 @@
 # ExpenseTrack
 
-The webpage is to track the expense:
+The webpage is to track the expense in React:
 
 - Add new expense
 - Display the expenses
