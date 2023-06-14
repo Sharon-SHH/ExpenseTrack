@@ -5,4 +5,4 @@ The webpage is to track the expense:
 - Add new expense
 - Display the expenses
 
-![img](C:\Users\User\Documents\Projects_Learning\React\ExpenseTrack\img.PNG)
+<img width="507" alt="img" src="https://github.com/Sharon-SHH/ExpenseTrack_React/assets/54816814/cfc9ee6c-c70a-42f6-8e1d-016daa78bd6b">
