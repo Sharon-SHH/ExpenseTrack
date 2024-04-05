@@ -1,0 +1,30 @@
+@use "../style/partials/mixin" as *;
+@use "../style/partials/variable" as *;
+
+.new-expense button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #883653;//;#cb8c0f;
+  background-color: #aa0f45; //#c07417;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+
+.new-expense button:hover,
+.new-expense button:active {
+  background-color: #348406;
+  border-color: #08a30d;
+}
+
+.new-expense button.alternative {
+  color: #040456;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.new-expense button.alternative:hover,
+.new-expense button.alternative:active {
+  background-color: #ddb3f8;
+}

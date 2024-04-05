@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './ExpenseForm.css';
+import './ExpenseForm.scss';
 
 const ExpenseForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('');
@@ -54,7 +54,7 @@ const ExpenseForm = (props) => {
               type="date"
               value={enteredDate}
               min="2019-01-01"
-              max="2023-12-31"
+              max="2024-05-31"
               onChange={dateHandler}
             />
           </div>

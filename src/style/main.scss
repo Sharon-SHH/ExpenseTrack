@@ -1,0 +1,66 @@
+@use "./partials/reset" as *;
+@use "./partials/variable" as *;
+@use "./partials/mixin" as *;
+
+
+.App {
+  background-color: $darkblack;
+  width: 100%;
+  padding: 1rem;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+}
+
+input[type="text"]::placeholder {
+  /* Your styles for the placeholder text here */
+  color: $silver; /* Change the placeholder text color to gray */
+}
+
+input[type="datetime-local"] {
+  @include select_dropdown;
+}
+select {
+  @include select_dropdown;
+}
+
+input[type="text"] {
+  border: 1px solid $mercury;
+  border-radius: $p-5;
+  color: $labelBlue;
+  padding: $p-5;
+  width: 100%;
+  margin-bottom: 1rem;
+  @include tablet-and-desk {
+    width: 91%;
+  }
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+   background-color: green;
+}
+
+
+span {
+    color: $red;
+}
+
+label {
+    @include lab-btn;
+    color: $labelBlue;
+    padding-right: 1rem;
+}
+
+h3 {
+    @include section-header;
+}
+
+p {
+  @include body-copy;
+}

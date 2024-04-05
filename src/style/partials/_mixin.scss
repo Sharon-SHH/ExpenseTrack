@@ -1,0 +1,100 @@
+@use "./variable.scss" as *;
+
+@mixin tablet-and-desk {
+    @media screen and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+@mixin page-header {
+    font-size: $p-24;
+    line-height: $p-32;
+
+    @include tablet-and-desk {
+        font-size: $p-33;
+        line-height: $p-44;
+    } 
+}
+
+@mixin section-header {
+    font-size: $p-22;
+    line-height: $p-22;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+
+    @include tablet-and-desk{
+        font-size: $p-28;
+        line-height: $p-32;
+    }
+}
+
+
+@mixin body-copy {
+    font-size: $p-13;
+    line-height: $p-22;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    
+    @include tablet-and-desk{
+        font-size: $p-16;
+        line-height: $p-20;
+    }
+}
+
+@mixin lab-btn {
+    font-size: $p-10;
+    line-height: $p-20;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+
+    @include tablet-and-desk{
+        font-size: $p-12;
+        line-height: $p-24;
+    }
+}
+
+@mixin global-btn {
+    background-color: $blue;
+    color: $white;
+    width: 100%;
+    height: $p-44;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    @include lab-btn;
+
+    @include tablet-and-desk {
+        margin: 0 $p-33;
+        width: 30%;
+    }
+}
+
+@mixin card {
+//   background-color: $card_grey;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(18, 7, 148, 0.1); /* Add shadow for depth */
+  padding: 20px;
+  max-width: $card-m-max-width;
+  margin: 20px auto; /* Center horizontally */
+  background: linear-gradient(to bottom right, $card_grey, #f2f2f4, $card_grey,);
+  @include tablet-and-desk() {
+    max-width: $card-max-width;
+  }
+  @include desktop(){
+    max-width: $wrapper-max-width;
+  }
+}
+
+@mixin select_dropdown {
+  border: 1px solid $mercury;
+  border-radius: $p-20;
+  color: $labelBlue;
+  padding: $p-5;
+  margin-bottom: 1rem;
+}

@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import './style/main.scss';
 import ExerciseComponent from './Customes/ExerciseComponent';
 import NewExpense from './NouveauExpense/NewExpense';
+import Header from './Header/Header';
 
 function App() {
   const expenses = [
@@ -30,8 +30,9 @@ function App() {
   };
   return (
     <div className="App">
+      <Header />
       <NewExpense onAddExpense={addExpenseHandler}/>
-      <header className="App-header">
+      <header className="App__wrapper">
         <ExerciseComponent
           date={expenses[0].date}
           title={expenses[0].title}
