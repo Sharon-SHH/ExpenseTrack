@@ -1,0 +1,24 @@
+@use "../style/partials/variable" as *;
+@use "../style/partials/mixin" as *;
+
+h1 {
+    @include page-header;
+    color: $white;
+}
+.header{
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    text-align: center;
+    &__wrapper{
+        max-width: $card-m-max-width;
+        text-align: center;
+        @include tablet-and-desk() {
+            max-width: $card-max-width;
+        }
+        @include desktop(){
+            max-width: $wrapper-max-width;
+        }
+    }
+}

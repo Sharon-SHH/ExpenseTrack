@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ExerciseComponent.css';
+import './ExerciseComponent.scss';
 import ExerciseDate from './ExerciseDate';
 
 function ExerciseComponent(props) {

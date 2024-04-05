@@ -1,5 +1,5 @@
 import React from "react";
-import './NewExpense.css';
+import './NewExpense.scss';
 import ExpenseForm from "./ExpenseForm";
 
 const NewExpense = (props) => {
